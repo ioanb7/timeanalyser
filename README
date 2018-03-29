@@ -1,0 +1,9 @@
+Steps to use this:
+* python bot/app.py is executed, and !archive is called from the discord server you want to archive. a file rawdata.txt is produced
+* rawdata.txt goes in HDFS under /user/{$USER}
+* time analyser is executed on the input rawdata.txt
+* a file part-00000 is produced, renamed under database.txt and moved under bot/ again
+* the command !reload is called on any server on the discord
+* any user can run "!activity" or "!activity @username" and it comes up with a message "Replying every X minutes. Not bad."
+
+NOTE: the commands !archive and !reload only work for one user_id. make sure you modify that.
